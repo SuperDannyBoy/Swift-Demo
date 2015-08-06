@@ -62,8 +62,12 @@ if let obj = findTheMaxAndMinNumber([1,2,3,5,8,0,78,45,23,45,7,0,100]) {
     print("\(obj.min)   \(obj.max)")
 }
 
-//外部参数名
+//指定外部参数名
+func action(out int: String, out1 int1: String) {
+    print(int+" love "+int1)
+}
 
+action(out: "danny", out1: "Maggie")
 
 
 
