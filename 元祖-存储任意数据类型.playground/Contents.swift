@@ -4,7 +4,7 @@ import UIKit
 
 /*元祖:存储任意数据类型*/
 let dic:NSDictionary = ["key1":"danny", "key2":"1", "key3":"20"]
-//元祖不允许存储一个对，至少需要2个及以上
+//元祖不允许存储只有一个对象，至少需要2个及以上
 let registerResult = (obj1:dic, name1:"danny")
 let xxxxxxx = (obj1:"myName", sex:"man", number:1)
 
@@ -21,6 +21,9 @@ registerResult.name1
 //registerResult.1
 //registerResult.2
 //registerResult.0
+
+
+let (x, y) = (1, 2)
 
 
 let valueInt = 111
