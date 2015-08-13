@@ -67,8 +67,34 @@ func action(out int: String, out1 int1: String) {
     print(int+" love "+int1)
 }
 
-action(out: "danny", out1: "Maggie")
+action(out: "Danny", out1: "maggie")
 
 
+//忽略外部參數
+func action1(int: String, _ int2:String) {
+    
+}
+
+action1("1", "2")
+
+//不定数量的参数
+func mutableParameter(parameters: Double...) -> Double {
+    var count = 0.0
+    for parameter in parameters {
+        count += parameter
+    }
+    return count
+}
+
+print("所有数据总和\(mutableParameter(1,2,3,4,5,6,7,8,9,0,12,3,43,5,4,6,5,657,66))")
+
+func mutableParameter1(parame: String, parame1: String, parame2: Int...) {
+    print(parame + parame1)
+}
+
+mutableParameter1("0", parame1: "2", parame2: 8,8,3,3,2,1)
+
+//常量参数、变量参数
+func
 
 
