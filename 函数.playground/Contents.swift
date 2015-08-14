@@ -63,6 +63,7 @@ if let obj = findTheMaxAndMinNumber([1,2,3,5,8,0,78,45,23,45,7,0,100]) {
 }
 
 //指定外部参数名
+///out、out1为外部参数名
 func action(out int: String, out1 int1: String) {
     print(int+" love "+int1)
 }
@@ -95,6 +96,45 @@ func mutableParameter1(parame: String, parame1: String, parame2: Int...) {
 mutableParameter1("0", parame1: "2", parame2: 8,8,3,3,2,1)
 
 //常量参数、变量参数
-func
+///将传入参数改变原有的值之后返回新的值
+func addSubString(var subString: String, stringlength: Int) -> String {
+    let length = stringlength - subString.characters.count
+    if length < 1 {
+        return subString
+    }
+    for _ in 1...length {
+        subString += "!"
+    }
+    return subString;
+}
+
+print(addSubString("Danny", stringlength: 10))
+
+//输入输出参数
+/*
+    如果你想要一个函数可以修改参数的值，并且想要在这些修改在函数调用结束后仍然存在，那么就应该把这个参数定义为输入输出参数（In-Out Parameters）
+    输入输出参数不能有默认值，而且可变参数不能用 inout 标记。如果你用 inout 标记一个参数，这个参数不能被 var 或者 let 标记。
+*/
+
+func outIn(inout a: String, subString: String) {
+    a += subString
+}
+
+var string = "xxxx"
+
+outIn(&string, subString: "Danny");
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
